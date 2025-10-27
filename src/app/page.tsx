@@ -258,7 +258,7 @@ export default function Home() {
               transform: `translate(-50%, -50%) rotate(${randomPosition.rotation}deg)`
             }}
           >
-            <div className="bg-black/50 backdrop-blur-sm px-4 py-2 rounded-full border border-white/50 whitespace-nowrap">
+            <div className="bg-black/50 backdrop-blur-sm px-3 py-2 md:px-4 rounded-full border border-white/50 whitespace-nowrap text-xs md:text-sm">
               &ldquo;{messages[currentMessage]}&rdquo;
             </div>
           </div>
@@ -266,7 +266,7 @@ export default function Home() {
       </div>
       
       {/* Liquid Glass Header */}
-      <div className="absolute top-8 left-1/2 transform -translate-x-1/2 w-[95%] max-w-7xl md:w-[95%] w-[85%]">
+      <div className="absolute top-8 left-1/2 transform -translate-x-1/2 w-[85%] md:w-[95%] max-w-7xl">
         <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-full p-6 md:p-6 p-4 shadow-2xl">
           <div className="flex items-center justify-between">
             {/* Left Side - Logo and Text */}
@@ -315,7 +315,7 @@ export default function Home() {
       </div>
       
       {/* Mobile Equalizer - Fixed above X button */}
-      <div className="absolute bottom-24 left-8 text-white md:hidden">
+      <div className="absolute bottom-24 left-4 text-white md:hidden">
         <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-2 flex items-center gap-2 hover:bg-white/20 transition-all duration-300 hover:scale-105 shadow-2xl">
           <div className="flex items-end gap-1 h-4">
             {audioData.slice(0, 4).map((value, i) => (
@@ -339,23 +339,23 @@ export default function Home() {
       </div>
 
       {/* Bottom Left - X Link */}
-      <div className="absolute bottom-8 left-8 text-white">
+      <div className="absolute bottom-6 left-4 md:bottom-8 md:left-8 text-white">
         <a 
           href="https://x.com/i/communities/1982937891119509718/" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-6 py-3 flex items-center gap-3 hover:bg-white/20 transition-all duration-300 hover:scale-105 shadow-2xl"
+          className="bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-2 md:px-6 md:py-3 flex items-center gap-2 md:gap-3 hover:bg-white/20 transition-all duration-300 hover:scale-105 shadow-2xl"
         >
-          <FaTwitter className="text-xl" />
-          <span className="text-lg font-medium">Join us on X</span>
+          <FaTwitter className="text-lg md:text-xl" />
+          <span className="text-sm md:text-lg font-medium">Join us on X</span>
         </a>
       </div>
       
       {/* Bottom Right - CA Button */}
-      <div className="absolute bottom-8 right-8 text-white">
+      <div className="absolute bottom-6 right-4 md:bottom-8 md:right-8 text-white">
         <button
           onClick={handleCopyCA}
-          className="bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-6 py-3 text-white text-lg font-medium hover:bg-white/20 transition-all duration-300 hover:scale-105 shadow-2xl"
+          className="bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-2 md:px-6 md:py-3 text-white text-sm md:text-lg font-medium hover:bg-white/20 transition-all duration-300 hover:scale-105 shadow-2xl"
         >
           Copy CA
         </button>
