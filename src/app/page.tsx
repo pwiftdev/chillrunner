@@ -180,7 +180,7 @@ export default function Home() {
   // Loader Page
   if (!showMainPage) {
     return (
-      <div className="h-screen w-screen overflow-hidden bg-[#898d6c] flex flex-col items-center justify-center relative">
+      <div className="min-h-screen w-screen bg-[#898d6c] flex flex-col items-center justify-center relative">
         {/* Background Music */}
         <audio ref={audioRef} loop>
           <source src="/chillmusic.mp3" type="audio/mpeg" />
@@ -214,7 +214,7 @@ export default function Home() {
 
   // Main Page
   return (
-    <div className="h-screen w-screen overflow-hidden bg-[#898d6c] flex flex-col items-center justify-center relative">
+    <div className="min-h-screen w-screen bg-[#898d6c] flex flex-col items-center justify-center relative">
       {/* Background Music */}
       <audio ref={audioRef} loop autoPlay>
         <source src="/chillmusic.mp3" type="audio/mpeg" />
@@ -266,7 +266,7 @@ export default function Home() {
       </div>
       
       {/* Liquid Glass Header */}
-      <div className="absolute top-8 left-1/2 transform -translate-x-1/2 w-[85%] md:w-[95%] max-w-7xl">
+      <div className="fixed top-4 left-1/2 transform -translate-x-1/2 w-[85%] md:w-[95%] max-w-7xl z-50">
         <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-full p-6 md:p-6 p-4 shadow-2xl">
           <div className="flex items-center justify-between">
             {/* Left Side - Logo and Text */}
@@ -315,7 +315,7 @@ export default function Home() {
       </div>
       
       {/* Mobile Equalizer - Fixed above X button */}
-      <div className="absolute bottom-24 left-4 text-white md:hidden">
+      <div className="fixed bottom-24 left-4 text-white md:hidden z-40">
         <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-2 flex items-center gap-2 hover:bg-white/20 transition-all duration-300 hover:scale-105 shadow-2xl">
           <div className="flex items-end gap-1 h-4">
             {audioData.slice(0, 4).map((value, i) => (
@@ -339,7 +339,7 @@ export default function Home() {
       </div>
 
       {/* Bottom Left - X Link */}
-      <div className="absolute bottom-6 left-4 md:bottom-8 md:left-8 text-white">
+      <div className="fixed bottom-6 left-4 md:bottom-8 md:left-8 text-white z-40">
         <a 
           href="https://x.com/i/communities/1982937891119509718/" 
           target="_blank" 
@@ -352,7 +352,7 @@ export default function Home() {
       </div>
       
       {/* Bottom Right - CA Button */}
-      <div className="absolute bottom-6 right-4 md:bottom-8 md:right-8 text-white">
+      <div className="fixed bottom-6 right-4 md:bottom-8 md:right-8 text-white z-40">
         <button
           onClick={handleCopyCA}
           className="bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-2 md:px-6 md:py-3 text-white text-sm md:text-lg font-medium hover:bg-white/20 transition-all duration-300 hover:scale-105 shadow-2xl"
