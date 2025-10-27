@@ -130,8 +130,7 @@ export default function Home() {
   };
 
   const handleCopyCA = () => {
-    // TODO: Replace with actual contract address
-    const contractAddress = "0x0000000000000000000000000000000000000000";
+    const contractAddress = "3iuASu293EEjoG125EL84vbojZdsJctJGjZu5stGpump";
     navigator.clipboard.writeText(contractAddress).then(() => {
       alert("Contract Address copied to clipboard!");
     }).catch(() => {
@@ -305,10 +304,15 @@ export default function Home() {
                 {isPlaying ? <FaPause className="text-lg" /> : <FaPlay className="text-lg" />}
               </button>
               
-              {/* Chart Button */}
-              <button className="bg-white/20 backdrop-blur-sm px-4 py-2 md:px-6 md:py-3 rounded-full border border-white/30 text-white text-sm md:text-lg font-medium hover:bg-white/30 transition-all duration-300 hover:scale-105">
-                Chart
-              </button>
+          {/* Chart Button */}
+          <a 
+            href="https://pump.fun/coin/3iuASu293EEjoG125EL84vbojZdsJctJGjZu5stGpump" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="bg-white/20 backdrop-blur-sm px-4 py-2 md:px-6 md:py-3 rounded-full border border-white/30 text-white text-sm md:text-lg font-medium hover:bg-white/30 transition-all duration-300 hover:scale-105"
+          >
+            Chart
+          </a>
             </div>
           </div>
         </div>
